@@ -90,6 +90,17 @@ public class SortUtils {
 		return randomData;
 	}
 
+	
+	public static int[] generateDuplicateData(int count) {
+
+		int[] duplicateData = new int[count];
+		for (int i = 0; i < count; i++) {
+			duplicateData[i]=2; //just any number would do. Just bored with the default 0
+		}
+		
+		return duplicateData;
+	}
+	
 	public static Integer[] convertIntArrayToIntegerArray(int[] input) {
 
 		Integer[] newArray = new Integer[input.length];
@@ -100,5 +111,5 @@ public class SortUtils {
 
 		return newArray;
 	}
-
+	
 }

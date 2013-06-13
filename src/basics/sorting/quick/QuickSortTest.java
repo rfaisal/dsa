@@ -1,5 +1,6 @@
 package basics.sorting.quick;
 
+import static basics.sorting.utils.SortUtils.generateDuplicateData;
 import static basics.sorting.utils.SortUtils.generateRandomData;
 import static basics.sorting.utils.SortUtils.isSorted;
 import static org.junit.Assert.assertTrue;
@@ -15,6 +16,7 @@ public class QuickSortTest {
 	@BeforeClass
 	public static void setup(){
 		input=generateRandomData(10000000);
+		//input=generateDuplicateData(10000000);
 	}
 	 
 

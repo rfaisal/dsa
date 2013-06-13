@@ -15,10 +15,21 @@ public class QuickSortDualPivot {
 	private void sort(int[] input, int lowIndex, int highIndex) {
 
 		if (highIndex<=lowIndex) return;
+		
+		
+		//skip longest ascending sequence & duplicates if any at the initial part
+		while (input[lowIndex+1]>=input[lowIndex]){
+			lowIndex++;
+			
+			if (lowIndex>=highIndex){
+				return;
+			}
+		}
 
 		//System.out.println("LowIndex/HighIndex :"+lowIndex+"/"+highIndex);
 		int pivot1=input[lowIndex];
 		int pivot2=input[highIndex];
+		
 		
 		if (pivot1>pivot2){
 			exchange(input, lowIndex, highIndex);
@@ -26,13 +37,8 @@ public class QuickSortDualPivot {
 			pivot2=input[highIndex];
 			//sort(input, lowIndex, highIndex);
 		}
-		/*else if (pivot1==pivot2){
-			//shuffle(input);
-			exchange(input, lowIndex, lowIndex+1);
-			pivot1=input[lowIndex];
-			sort(input, lowIndex, highIndex);
-		}*/
 		
+
 		int i=lowIndex+1;
 		int lt=lowIndex+1;
 		int gt=highIndex-1;
