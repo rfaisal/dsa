@@ -3,12 +3,13 @@ package basics.sorting.quick;
 import static basics.shuffle.KnuthShuffle.shuffle;
 import static basics.sorting.utils.SortUtils.exchange;
 import static basics.sorting.utils.SortUtils.less;
+import static basics.sorting.utils.SortUtils.greater;
 
 public class QuickSort3Way {
 	
 	
 	public void sort (int[] input){
-		input=shuffle(input);
+		//input=shuffle(input);
 		sort (input, 0, input.length-1);
 	}
 
@@ -31,12 +32,12 @@ public class QuickSort3Way {
 			if (less(input[i],pivotValue)){
 				exchange(input, i++, lt++);
 			}
-			else if (less (pivotValue, input[i])){
+			else /*if (less (pivotValue, input[i]))*/{
 				exchange(input, i, gt--);
 			}
-			else{
-				i++;
-			}
+			//else{
+			//	i++;
+			//}
 				
 			
 		}

@@ -8,7 +8,7 @@ public class QuickSortBasic {
 
 	public void sort (int[] input){
 		
-		KnuthShuffle.shuffle(input);
+		//KnuthShuffle.shuffle(input);
 		sort (input, 0, input.length-1);
 	}
 

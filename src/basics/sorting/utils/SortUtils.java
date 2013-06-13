@@ -7,6 +7,9 @@ public class SortUtils {
 	public static boolean less(Comparable a, Comparable b) {
 		return a.compareTo(b) < 0;
 	}
+	public static boolean greater(Comparable a, Comparable b) {
+		return a.compareTo(b) > 0;
+	}
 
 	public static boolean less(int a, int b) {
 		return a < b;
