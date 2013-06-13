@@ -32,12 +32,12 @@ public class QuickSort3Way {
 			if (less(input[i],pivotValue)){
 				exchange(input, i++, lt++);
 			}
-			else /*if (less (pivotValue, input[i]))*/{
+			else if (less (pivotValue, input[i])){
 				exchange(input, i, gt--);
 			}
-			//else{
-			//	i++;
-			//}
+			else{
+				i++;
+			}
 				
 			
 		}
